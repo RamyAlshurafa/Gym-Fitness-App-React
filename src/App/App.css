@@ -1,0 +1,13 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  /* transition: all 1s ease-out; */
+}
+
+body {
+  min-height: 8000px;
+  font-family: 'Roboto', sans-serif;
+  background-color: gray
+}

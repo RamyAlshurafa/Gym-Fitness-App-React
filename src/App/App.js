@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import {
   BrowserRouter as Router,
-  Route,
   Switch
 } from "react-router-dom";
+
+import Header from './CommonComponents/Header'
 
 import './App.css';
 
@@ -12,9 +13,11 @@ class App extends Component {
     return (
       <div className="App">
         <Router>
+        <div>
+        <Header />
           <Switch>
-            <Route path="/" exact render={()=> <h1>Home Page</h1>} />
           </Switch>
+          </div>
         </Router>
       </div>
     );
