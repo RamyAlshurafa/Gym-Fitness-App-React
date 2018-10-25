@@ -1,0 +1,167 @@
+.home1__features {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(http://sitetemplate.demo.ithemeslab.com/befit/male/assets/images/bg/bg1.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  position: relative;
+  z-index: 0;
+  min-height: 600px;
+}
+
+.home1__features:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 78, 0, 0.8);
+  opacity: 1;
+  display: block;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.home1__features__container {
+  margin: 0 auto;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 15%;
+  left: 50%;
+}
+
+.home1__features__container .feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  margin: 0 16px;
+  width: 350px;
+  height: 428px;
+  transition: all 0.7s ease-in-out;
+  padding: 0 30px;
+}
+
+.home1__features__container .feature:hover {
+  transform: translateY(-60px)
+}
+
+.home1__features__container .feature__icon {
+  width: 70px;
+}
+
+.home1__features__container .feature__title {
+  font-size: 25px;
+  margin: 20px auto;
+}
+
+.home1__features__container .feature__text {
+  font-size: 15px;
+  color: #6b6b6b;
+  text-align: center;
+  line-height: 25px;
+  margin-bottom: 20px;
+}
+
+
+.home1__features__container .feature__button {
+  background: #fff;
+  color: #6b6b6b;
+  border: 1px solid #6b6b6b;
+  padding: 11px 17px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.5s ease-out;
+
+}
+
+.home1__features__container .feature__button:hover {
+  background: #ea510d;
+  color: #fff;
+  border: 1px solid #ea510d;
+
+}
+
+.text--uppercase {
+  text-transform: uppercase;
+}
+
+.home1__features__signup {
+  position: absolute;
+  top: 70%;
+  text-align: center;
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.home1__features__signup .signup__text {
+  font-size: 35px;
+  color: #fff;
+  text-transform: capitalize;
+  display: inline;
+  line-height: 60px;
+}
+
+.home1__features__signup .signup__button {
+  background-color: rgba(255, 78, 0, 0);
+  padding: 20px;
+  color: #fff;
+  border: 1px solid #fff;
+  font-size: 15px;
+  font-weight: 900;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.5s ease-out;
+
+}
+
+.home1__features__signup .signup__button:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+
+@media only screen and (max-width: 940px) {
+  .home1__features__container {
+    position: static;
+    transform: none;
+    left: none;
+    top: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .home1__features__container .feature {
+    width: 70%;
+    margin: 20px auto;
+    padding: 0 50px
+  }
+
+  .home1__features__container .feature:hover {
+    transform: none
+  }
+
+  .home1__features__signup {
+    position: static
+  }
+
+  .home1__features__signup .signup__text {
+    margin: 25px auto
+  }
+
+  .home1__features__signup .signup__button {
+    margin-bottom: 25px
+  }
+}
