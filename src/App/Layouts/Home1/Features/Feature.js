@@ -1,7 +1,4 @@
-import React, { Component } from 'react';
-import {
-  NavLink
-} from "react-router-dom";
+import React from 'react';
 
 const Feature = (props) => {
   const {
@@ -16,7 +13,7 @@ const Feature = (props) => {
       <h2 className="feature__title text--uppercase">
         {title}
       </h2>
-      <p className="feature__text text--uppercase">
+      <p className="feature__text">
         {text}
       </p>
       <button className="feature__button text--uppercase">
