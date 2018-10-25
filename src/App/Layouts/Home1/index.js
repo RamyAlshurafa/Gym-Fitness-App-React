@@ -1,15 +1,19 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment} from 'react';
 import {
   NavLink
 } from "react-router-dom";
 
 import Slider from "../../CommonComponents/Slider";
+import Features from './Features';
 
 class Home1 extends Component {
 
   render() {
     return (
-        <Slider />
+        <Fragment>
+          <Slider />
+          <Features />
+        </Fragment>
     )
   }
 }
