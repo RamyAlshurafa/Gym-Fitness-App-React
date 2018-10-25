@@ -14,4 +14,4 @@ export const data = [
 		title: 'weight left',
 		text: 'Lorem ipsum dolor sit amet, ei veritus consetetur repudiandae eam, duo ne homero nostro moderatius.'
 	}
-];
+]

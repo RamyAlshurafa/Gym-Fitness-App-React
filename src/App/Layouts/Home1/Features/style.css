@@ -72,7 +72,6 @@
   margin-bottom: 20px;
 }
 
-
 .home1__features__container .feature__button {
   background: #fff;
   color: #6b6b6b;
@@ -81,14 +80,12 @@
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.5s ease-out;
-
 }
 
 .home1__features__container .feature__button:hover {
   background: #ea510d;
   color: #fff;
   border: 1px solid #ea510d;
-
 }
 
 .text--uppercase {
@@ -123,7 +120,6 @@
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.5s ease-out;
-
 }
 
 .home1__features__signup .signup__button:hover {
