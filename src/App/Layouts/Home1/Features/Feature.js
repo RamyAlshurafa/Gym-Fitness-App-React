@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Feature = (props) => {
   const {
@@ -21,6 +22,12 @@ const Feature = (props) => {
       </button>
     </div>
   )
+}
+
+Feature.propTypes = {
+  imgUrl: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired
 }
 
 export default Feature;
