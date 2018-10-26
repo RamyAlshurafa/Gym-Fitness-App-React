@@ -1,7 +1,4 @@
 import React, { Component, Fragment} from 'react';
-import {
-  NavLink
-} from "react-router-dom";
 
 import Slider from "../../CommonComponents/Slider";
 import Features from './Features';
