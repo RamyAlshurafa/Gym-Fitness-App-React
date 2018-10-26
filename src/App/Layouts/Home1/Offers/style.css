@@ -1,0 +1,174 @@
+.home1__offers {
+  display: flex;
+  width: 100%;
+  background: #fff;
+  justify-content: center;
+  align-items: center
+}
+
+.home1__coach .home1__coach_img {
+  width: 100%;
+  max-width: 100%;
+}
+
+.home1__offers__container {
+  margin-left: 50px;
+  display: flex;
+  flex-direction: column;
+  max-width: 50%;
+  padding-top: 110px
+}
+
+.home1__offers__description {
+  margin: 50px 0;
+}
+
+.home1__offers__title {
+  font-size: 35px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.home1__offers__description {
+  font-size: 35px;
+  font-weight: 700;
+  color: #ea510d;
+  text-align: center
+}
+
+.home1__offers__tabs-container {
+  position: relative;
+}
+
+.home1__offers__tabs-container::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  max-width: 850px;
+  border-bottom: 1px solid;
+  border-image: linear-gradient(to left, #aaa 0%, #a6a6a6 50%, #aaa 100%);
+  border-image-slice: 1;
+  top: -40px;
+}
+
+.home1__offers .tabs__buttons {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(26%, 23%));
+  grid-gap: 10px;
+  grid-template-rows: auto;
+}
+
+.home1__offers .tab__buttons {
+  background: none;
+  border: none;
+  justify-self: start;
+  position: relative;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.5s ease-out;
+  margin-left: 24px
+}
+
+.home1__offers .tab__buttons::before {
+  content: "";
+  width: 13px;
+  height: 13px;
+  display: inline-block;
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid #ea510d;
+  left: -24px;
+  top: 50%;
+  transform: translate(0%, -50%);
+  transition: all 0.5s ease-out;
+}
+
+.home1__offers .tab__buttons--active::before {
+  border: 2px solid #000;
+}
+
+.home1__offers .tab__buttons--active {
+  color: #ea510d;
+}
+
+.home1__offers .tab__description__p {
+  line-height: 30px;
+  margin-top: 35px;
+  font-size: 15px;
+  color: #6b6b6b;
+  text-align: justify;
+  transition: all 0.5s ease-out;
+  margin-bottom: 50px
+}
+
+.home1__offers__signup {
+  background: #ea510d;
+  border: none;
+  color: #fff;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: 900;
+  padding: 20px;
+  width: 145px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 0.5s ease-out;
+  margin-bottom: 50px
+}
+
+.home1__offers__signup:hover {
+  background: #fff;
+  color: #000;
+  border: 1px solid #000
+}
+
+@media only screen and (max-width: 1250px) {
+  .home1__offers__container {
+    width: 60%
+  }
+
+  .home1__coach {
+    width: 30%
+  }
+}
+
+@media only screen and (max-width: 1025px) {
+  .home1__offers {
+    flex-wrap: wrap
+  }
+
+  .home1__offers__container {
+    width: 80%;
+    max-width: 100%;
+    align-items: center;
+    margin-left: 0;
+    margin-bottom: 50px
+  }
+
+  .home1__coach {
+    width: 70%;
+    margin-top: 50px
+  }
+
+  .home1__offers .tab__description__p {
+    text-align: center
+  }
+}
+
+@media only screen and (max-width: 1025px) {
+  .tabs__buttons {
+    grid-template-columns: repeat(auto-fill, minmax(51%, 33%));
+  }
+
+  .home1__offers .tab__buttons {
+    justify-self: start;
+  }
+
+  .home1__offers .tabs__buttons {
+    width: 50%;
+    margin: 0 auto;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr;
+  }
+}
