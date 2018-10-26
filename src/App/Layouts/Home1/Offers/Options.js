@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 class Options extends Component {
   state = {
-    activeTabIndex: 1
+    activeTabIndex: 0
   }
 
   static propTypes = {
@@ -14,7 +14,6 @@ class Options extends Component {
         tabDescription: PropTypes.string.isRequired
       }).isRequired
     )
-
   }
 
   handleChange = (event) => {
@@ -27,13 +26,14 @@ class Options extends Component {
   render() {
     const { data } = this.props
     const { activeTabIndex } = this.state
+    const description = data[activeTabIndex].tabDescription
     return (
       <div className="home1__offers__tabs-container">
         <div className="tabs__buttons" >
           {
             data.map((item,index) => (
               <button
-              className="tab__buttons"
+              className={`tab__buttons ${(activeTabIndex == index ) ? 'tab__buttons--active' : ''}`}
               onClick={this.handleChange}
               value={index}
               key={index}
@@ -44,7 +44,7 @@ class Options extends Component {
           }
         </div>
         <div className="tab__description">
-          <p className="tab__description__p">{data[activeTabIndex].tabDescription}</p>
+          <p className="tab__description__p">{description}</p>
         </div>
       </div>
     )
