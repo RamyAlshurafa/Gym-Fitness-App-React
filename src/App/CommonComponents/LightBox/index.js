@@ -1,12 +1,22 @@
 import React, { Component } from 'react';
 
 import Box from './Box'
+import LeftArrow from './LeftArrow'
+import RightArrow from './RightArrow'
 
 class LightBox extends Component {
   state = {
     images: [],
     isActive: false,
     activeIndex: 0
+  }
+
+  handlePreviousClick = () => {
+
+  }
+
+  handleNextClick = () => {
+
   }
 
   componentDidMount() {
@@ -19,6 +29,12 @@ class LightBox extends Component {
   render() {
     return (
       <div className="lightbox">
+      
+        <LeftArrow
+        leftArrowClass={this.props.leftArrowClass}
+        handlePreviousClick={this.handlePreviousClick}
+        />
+
         {this.state.images.map((item, index) => (
           <Box
           imageUrl={item.imageUrl}
@@ -28,6 +44,12 @@ class LightBox extends Component {
             {item.children}
           </Box>
         ))}
+
+        <RightArrow
+        rightArrowClass={this.props.rightArrowClass}
+        handlePreviousClick={this.handlePreviousClick}
+        />
+
       </div>
     )
   }
