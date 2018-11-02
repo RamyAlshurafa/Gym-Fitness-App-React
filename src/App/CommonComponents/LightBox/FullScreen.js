@@ -7,7 +7,7 @@ const FullScreen = ({
   return (
     isActive 
     ? (
-        <div className="lightbox__fullscreen">
+        <div className="lightbox__fullscreen" onClick={handleClose}>
           <button className="lightbox__fullscreen__close" onClick={handleClose}>
             ×
           </button>
