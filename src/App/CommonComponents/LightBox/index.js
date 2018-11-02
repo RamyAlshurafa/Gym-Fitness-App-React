@@ -72,6 +72,7 @@ class LightBox extends Component {
         <LeftArrow
         leftArrowClass={this.props.leftArrowClass}
         handlePreviousClick={this.handlePreviousClick}
+        isActive={this.state.isActive}
         />
 
         {this.state.images.map((item, index) => (
@@ -89,6 +90,7 @@ class LightBox extends Component {
         <RightArrow
         rightArrowClass={this.props.rightArrowClass}
         handleNextClick={this.handleNextClick}
+        isActive={this.state.isActive}
         />
 
       </div>

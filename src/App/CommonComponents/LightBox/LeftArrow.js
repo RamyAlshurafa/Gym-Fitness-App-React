@@ -1,12 +1,16 @@
 import React from 'react';
 
-const LeftArrow = ({ leftArrowClass, handlePreviousClick }) => {
+const LeftArrow = ({ leftArrowClass, handlePreviousClick, isActive }) => {
   const className = `lightbox__nextArrow ${leftArrowClass}`
 
   return (
-    <div className={className} onClick={handlePreviousClick}>
-      <i className="fas fa-arrow-left"></i>
-    </div>
+    isActive
+    ? (
+      <div className={className} onClick={handlePreviousClick}>
+        <i className="fas fa-arrow-left"></i>
+      </div>
+    )
+    : null
   )
 }
 
