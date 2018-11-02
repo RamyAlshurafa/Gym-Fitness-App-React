@@ -12,7 +12,14 @@ class LightBox extends Component {
   }
 
   handlePreviousClick = () => {
-
+    const { activeIndex, images } = this.state
+    const newActiveIndex = ( activeIndex === 0 ? images.length - 1 : activeIndex - 1 )
+    this.setState(
+      {
+        ...this.state,
+        activeIndex: newActiveIndex
+      }
+    )
   }
 
   handleNextClick = () => {
