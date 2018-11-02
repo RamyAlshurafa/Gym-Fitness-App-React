@@ -47,7 +47,7 @@ class LightBox extends Component {
 
         <RightArrow
         rightArrowClass={this.props.rightArrowClass}
-        handlePreviousClick={this.handlePreviousClick}
+        handleNextClick={this.handleNextClick}
         />
 
       </div>
