@@ -33,6 +33,16 @@ class LightBox extends Component {
     )
   }
 
+  handleBoxClick = (boxIndex) => {
+    this.setState(
+      {
+        ...this.state,
+        isActive: true,
+        activeIndex: boxIndex
+      }
+    )
+  }
+
   componentDidMount() {
     this.setState({
       ...this.state,
@@ -51,9 +61,11 @@ class LightBox extends Component {
 
         {this.state.images.map((item, index) => (
           <Box
+          handleBoxClick={this.handleBoxClick}
           imageUrl={item.imageUrl}
           isActive={ this.state.activeIndex === index && this.state.isActive }
           boxClassName={this.props.boxClassName}
+          boxIndex={index}
           >
             {item.children}
           </Box>

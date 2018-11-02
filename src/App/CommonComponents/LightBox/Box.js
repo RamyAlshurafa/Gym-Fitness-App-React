@@ -4,7 +4,9 @@ const Box = ({
   imageUrl,
   isActive,
   children,
-  boxClassName
+  boxClassName,
+  handleBoxClick,
+  boxIndex
 }) => {
 
   const style = {
@@ -21,6 +23,7 @@ const Box = ({
     <div
     className={className}
     style={style}
+    onClick={() => handleBoxClick(boxIndex)}
     >
       { children ? children : null }
     </div>
