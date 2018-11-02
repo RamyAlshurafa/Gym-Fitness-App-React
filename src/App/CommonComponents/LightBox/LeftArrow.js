@@ -1,7 +1,7 @@
 import React from 'react';
 
 const LeftArrow = ({ leftArrowClass, handlePreviousClick, isActive }) => {
-  const className = `lightbox__nextArrow ${leftArrowClass}`
+  const className = `lightbox__previousArrow ${leftArrowClass}`
 
   return (
     isActive
