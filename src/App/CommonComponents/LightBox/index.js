@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import Box from './Box'
 import LeftArrow from './LeftArrow'
 import RightArrow from './RightArrow'
+import FullScreen from './FullScreen'
 
 class LightBox extends Component {
   state = {
@@ -43,6 +44,15 @@ class LightBox extends Component {
     )
   }
 
+  handleFullscreenClose = () =>{
+    this.setState(
+      {
+        ...this.state,
+        isActive: false
+      }
+    )
+  }
+
   componentDidMount() {
     this.setState({
       ...this.state,
@@ -53,6 +63,11 @@ class LightBox extends Component {
   render() {
     return (
       <div className="lightbox">
+        
+        <FullScreen 
+        handleClose={this.handleFullscreenClose}
+        isActive={this.state.isActive}
+        />
 
         <LeftArrow
         leftArrowClass={this.props.leftArrowClass}
