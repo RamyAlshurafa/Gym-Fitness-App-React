@@ -23,7 +23,14 @@ class LightBox extends Component {
   }
 
   handleNextClick = () => {
-
+    const { activeIndex, images } = this.state
+    const newActiveIndex = ( activeIndex === images.length - 1 ? 0 : activeIndex + 1 )
+    this.setState(
+      {
+        ...this.state,
+        activeIndex: newActiveIndex
+      }
+    )
   }
 
   componentDidMount() {
@@ -36,7 +43,7 @@ class LightBox extends Component {
   render() {
     return (
       <div className="lightbox">
-      
+
         <LeftArrow
         leftArrowClass={this.props.leftArrowClass}
         handlePreviousClick={this.handlePreviousClick}
