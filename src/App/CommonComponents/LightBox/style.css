@@ -1,0 +1,35 @@
+.lightbox{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.lightbox__box{
+  width: 25%;
+  transition: all 1s ease
+
+}
+.lightbox__box.activeBox{
+  position: sticky;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  transition: all 1s ease-in-out;
+  width: 80%
+}
+
+.lightbox__fullscreen{
+  position:fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.lightbox__nextArrow, .lightbox__previousArrow{
+  position: fixed;
+  top: 50%;
+  right: 0;
+
+}
+.lightbox__previousArrow{
+  left: 0
+}

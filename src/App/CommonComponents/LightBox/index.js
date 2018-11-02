@@ -5,6 +5,8 @@ import LeftArrow from './LeftArrow'
 import RightArrow from './RightArrow'
 import FullScreen from './FullScreen'
 
+import './style.css'
+
 class LightBox extends Component {
   state = {
     images: [],
