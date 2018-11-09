@@ -8,6 +8,7 @@ import FullScreen from './FullScreen'
 import './style.css'
 
 class LightBox extends Component {
+  Refs = []
   state = {
     images: [],
     isActive: false,
@@ -25,7 +26,7 @@ class LightBox extends Component {
     )
   }
 
-  handleNextClick = () => {
+  handleNextClick = () => { 
     const { activeIndex, images } = this.state
     const newActiveIndex = ( activeIndex === images.length - 1 ? 0 : activeIndex + 1 )
     this.setState(
@@ -59,15 +60,16 @@ class LightBox extends Component {
     this.setState({
       ...this.state,
       images: this.props.images
-    })
+    })    
   }
 
   render() {
     return (
       <div className="lightbox">
-        
+
         <FullScreen 
         handleClose={this.handleFullscreenClose}
+        activeImage={this.state.images[this.state.activeIndex]}
         isActive={this.state.isActive}
         />
 
@@ -84,6 +86,7 @@ class LightBox extends Component {
           isActive={ this.state.activeIndex === index && this.state.isActive }
           boxClassName={this.props.boxClassName}
           boxIndex={index}
+          myref={el => this.Refs[index] = el}
           >
             {item.children}
           </Box>

@@ -6,7 +6,8 @@ const Box = ({
   children,
   boxClassName,
   handleBoxClick,
-  boxIndex
+  boxIndex,
+  myref
 }) => {
 
   const style = {
@@ -24,6 +25,7 @@ const Box = ({
     className={className}
     style={style}
     onClick={() => handleBoxClick(boxIndex)}
+    ref={myref}
     >
       { children ? children : null }
     </div>
