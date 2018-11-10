@@ -4,32 +4,32 @@ const Box = ({
   imageUrl,
   isActive,
   children,
-  boxClassName,
   handleBoxClick,
   boxIndex,
-  myref
+  myref,
+  boxesNumber,
 }) => {
-
   const style = {
     backgroundImage: `url(${imageUrl})`,
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: '50% 50%',
-    objectFit: "fill"
-  }
+    objectFit: 'fill',
+    width: `${100 / boxesNumber}%`,
+  };
 
-  const className = `lightbox__box ${boxClassName} ${ isActive ? 'activeBox' : '' }`
+  const className = `lightbox__box ${isActive ? 'activeBox' : ''}`;
 
   return (
     <div
-    className={className}
-    style={style}
-    onClick={() => handleBoxClick(boxIndex)}
-    ref={myref}
+      className={className}
+      style={style}
+      onClick={() => handleBoxClick(boxIndex)}
+      ref={myref}
     >
-      { children ? children : null }
+      { children || null }
     </div>
-  )
-}
+  );
+};
 
 export default Box;
