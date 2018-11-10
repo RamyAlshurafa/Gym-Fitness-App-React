@@ -2,34 +2,80 @@
   display: flex;
   width: 100%;
   justify-content: space-between;
+  flex-wrap: wrap
 }
 .lightbox__box{
-  width: 25%;
-  transition: all 1s ease
-
-}
-.lightbox__box.activeBox{
-  position: sticky;
-  transform: translate(-50%, -50%);
-  top: 50%;
-  left: 50%;
-  transition: all 1s ease-in-out;
-  width: 80%
+  transition: all 1s ease;
+  cursor: pointer;
 }
 
 .lightbox__fullscreen{
   position:fixed;
   top: 0;
+  bottom: 0;
   left: 0;
   width: 100%;
+  background-color: rgba(64,64,64,.6);
 }
 
-.lightbox__nextArrow, .lightbox__previousArrow{
+.lightbox__nextArrow{
   position: fixed;
   top: 50%;
+  transform: translate(0,-50%);
   right: 0;
+  cursor: pointer;
+}
+
+.lightbox__previousArrow{
+  position: fixed;
+  top: 50%;
+  transform: translate(0, -50%);
+  left: 0;
+  cursor: pointer;
+}
+.lightbox__fullscreen__close,
+.lightbox__previousArrow ,
+.lightbox__nextArrow{
+  width: 60px;
+  padding: 30px 0;
+  font-size: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  line-height: 50px;
+  z-index: 1000;
+}
+
+.lightbox__fullscreen__close:hover,
+.lightbox__previousArrow:hover,
+.lightbox__nextArrow:hover{
+  font-size: 50px;
+  transition: all 500ms ease-in-out;
 
 }
-.lightbox__previousArrow{
-  left: 0
+
+.lightbox__fullscreen img {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+.fade-enter-done img {
+  left: 50%;
+  top: 50%;
+}
+
+.fade-exit.lightbox__fullscreen,
+.fade-exit-active.lightbox__fullscreen
+{
+  background-color: rgba(64,64,64,0);
+}
+.fade-exit .lightbox__previousArrow,
+.fade-exit-active .lightbox__previousArrow,
+.fade-exit .lightbox__nextArrow,
+.fade-exit-active .lightbox__nextArrow,
+.fade-exit .lightbox__fullscreen__close,
+.fade-exit-active .lightbox__fullscreen__close
+{
+  display: none;
 }
