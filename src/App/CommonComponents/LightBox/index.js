@@ -33,7 +33,7 @@ class LightBox extends Component {
   }
 
   handlePreviousClick = (e) => {
-    e.stopPropagation()
+    e.stopPropagation();
     const { activeIndex, images } = this.state;
     const newActiveIndex = (activeIndex === 0 ? images.length - 1 : activeIndex - 1);
     this.setState(
@@ -45,7 +45,7 @@ class LightBox extends Component {
   }
 
   handleNextClick = (e) => {
-    e.stopPropagation()
+    e.stopPropagation();
     const { activeIndex, images } = this.state;
     const newActiveIndex = (activeIndex === images.length - 1 ? 0 : activeIndex + 1);
     this.setState(
@@ -78,7 +78,7 @@ class LightBox extends Component {
     );
   }
 
-  handleFullscreenClose = () => { 
+  handleFullscreenClose = () => {
     const element = this.Refs[this.state.activeIndex];
     const {
       centerYPercent,
@@ -99,9 +99,16 @@ class LightBox extends Component {
     );
   }
 
+  componentDidUpdate(prevProps) {
+    if (prevProps.images !== this.props.images) {
+      this.setState({
+        ...this.state,
+        images: this.props.images,
+      });
+    }
+  }
 
   render() {
-    
     return (
       <div className="lightbox">
 
