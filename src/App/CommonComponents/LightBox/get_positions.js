@@ -3,23 +3,25 @@ const getPositions = (element) => {
     top,
     height,
     left,
-    width
-  } = element.getBoundingClientRect()
+    width,
+  } = element.getBoundingClientRect();
 
   const {
     innerWidth: windowWidth,
-    innerHeight: windowHeight
-  } = window
+    innerHeight: windowHeight,
+  } = window;
 
-  return {
-    elememt: {
-      centerY: top + ( height / 2 ),
-      centerX: left + ( width / 2 )
-    },
-    window: {
-      centerY: windowHeight / 2,
-      centerX: windowWidth / 2
-    }
-  }
-}
-export default getPositions
+  const centerY = top + (height / 2);
+  const centerX = left + (width / 2);
+
+  const positions = {
+    centerYPercent: `${(centerY / windowHeight) * 100}%`,
+    centerXPercent: `${(centerX / windowWidth) * 100}%`,
+    width,
+    height,
+  };
+
+  return positions;
+};
+
+export default getPositions;
