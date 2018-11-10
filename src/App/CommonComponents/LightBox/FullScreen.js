@@ -4,36 +4,48 @@ import {
   TransitionGroup,
 } from 'react-transition-group';
 
+import LeftArrow from './LeftArrow';
+import RightArrow from './RightArrow';
 
 const FullScreen = ({
   handleClose,
   isActive,
-  activeImage
-}) => {
-
+  activeImage,
+  handlePreviousClick,
+  handleNextClick,
+}) => {  
   return (
-    <TransitionGroup className="lightbox__fullscreen">
+
+    <TransitionGroup>
 
       {isActive
-      ?
-        <CSSTransition
-        key={0}
-        timeout={500}
-        classNames="fade"
-        appear={true}
-        >
-      
-          <div className="lightbox__fullscreen" onClick={handleClose}>
-            <button className="lightbox__fullscreen__close" onClick={handleClose}>
-              ×
-            </button>
-            <img src={activeImage.imageUrl} alt="full screen item"/>
-          </div>
-        </CSSTransition>
-      : null}
+        ? (
+          <CSSTransition
+            key={0}
+            timeout={1000}
+            classNames="fade"
+            appear
+          >
+
+            <div className="lightbox__fullscreen" onClick={handleClose} >
+              <LeftArrow
+                handlePreviousClick={handlePreviousClick}
+              />
+              <button className="lightbox__fullscreen__close" onClick={handleClose} type="button">
+                ×
+              </button>
+              <img src={activeImage.imageUrl} alt="full screen item" onClick={handleNextClick} />
+              <RightArrow
+                handleNextClick={handleNextClick}
+              />
+            </div>
+
+          </CSSTransition>
+        )
+        : null}
 
     </TransitionGroup>
   );
-}
+};
 
 export default FullScreen;
