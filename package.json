@@ -4,13 +4,13 @@
   "private": true,
   "dependencies": {
     "prop-types": "^15.6.2",
-    "react": "^16.5.2",
+    "react": "^16.7.0",
     "react-animated-slider": "^1.1.4",
-    "react-dom": "^16.5.2",
+    "react-dom": "^16.7.0",
     "react-images": "^0.5.19",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "2.0.5",
-    "react-transition-group": "^2.5.0"
+    "react-scripts": "2.1.1",
+    "react-transition-group": "^2.5.2"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -28,7 +28,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "eslint": "^5.8.0",
+    "eslint": "^5.11.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.2",
