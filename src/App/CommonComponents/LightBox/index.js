@@ -130,7 +130,7 @@ class LightBox extends Component {
             myref={el => this.Refs[index] = el}
             boxesNumber={this.state.images.length}
           >
-            {item.children}
+            {this.props.children[index]}
           </Box>
         ))}
 
