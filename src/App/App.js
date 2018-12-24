@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import {
   BrowserRouter as Router,
-  Switch
+  Switch,
+  Route
 } from "react-router-dom";
+
+import Home1 from "./Layouts/Home1";
 
 import Header from './CommonComponents/Header'
 
@@ -16,6 +19,7 @@ class App extends Component {
         <div>
         <Header />
           <Switch>
+            <Route exact path="/" component={Home1} />
           </Switch>
           </div>
         </Router>
