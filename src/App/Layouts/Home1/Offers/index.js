@@ -1,10 +1,10 @@
 import React from 'react';
 
-import Options from './Options'
+import Options from './Options';
 
-import { data } from "./data"
-import coach from './coach.png'
-import "./style.css"
+import { data } from './data';
+import coach from './coach.jpg';
+import './style.css';
 
 const Offers = () => (
   <div className="home1__offers">
@@ -20,6 +20,6 @@ const Offers = () => (
       </button>
     </div>
   </div>
-)
+);
 
 export default Offers;
